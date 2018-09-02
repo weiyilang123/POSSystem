@@ -27,8 +27,15 @@ namespace POSSystem.View
             userTypeLabel.Content = "User Limits: " + currentUser.UserType.Trim();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Close_Button_Click(object sender, RoutedEventArgs e)
         {
+            this.Close();
+        }
+
+        private void Signout_Button_Click(object sender, RoutedEventArgs e)
+        {
+            LoginWindow loginWindow = new LoginWindow();
+            loginWindow.Show();
             this.Close();
         }
     }

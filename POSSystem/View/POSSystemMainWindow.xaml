@@ -40,7 +40,11 @@
             <Label x:Name="nameLabel" Content="Current User:" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="15" FontWeight="Bold"/>
             <Label x:Name="userTypeLabel" Content="User Limits:" FontSize="15" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center"/>
         </StackPanel>
-        <Button Content="Close" Grid.Column="7" HorizontalAlignment="Right" Margin="0,40,0,42.333"  Grid.Row="0" VerticalAlignment="Center" Width="70" Height="70" Background="#FFA70101" Foreground="Black" FontWeight="ExtraBold" FontSize="20" Click="Button_Click"/>
+        <StackPanel Grid.Column="7" Margin="0,0,0,0" VerticalAlignment="Center">
+            <Button Content="Close" Margin="2,2,2,2" HorizontalAlignment="Left" Width="140" Height="70" Background="#FFA70101" Foreground="Black" FontWeight="ExtraBold" FontSize="18" Click="Close_Button_Click"/>
+            <Button Content="Logout" Margin="2,2,2,2" HorizontalAlignment="Left" Width="140" Height="70" Background="#FF16B638" Foreground="Black" FontWeight="ExtraBold" FontSize="18" Click="Signout_Button_Click"/>
+
+        </StackPanel>
 
 
     </Grid>
