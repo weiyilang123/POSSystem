@@ -45,7 +45,7 @@ namespace POSSystem.View
             if (u != null)
             {
                 wrongAuthMesaage.Content = "";
-                POSSystemMainWindow posSystemMainWindow = new POSSystemMainWindow(u);
+                POSSystemMainWindow posSystemMainWindow = new POSSystemMainWindow(); //u);
                 posSystemMainWindow.Show();
                 this.Close();
 

@@ -20,9 +20,19 @@ namespace POSSystem.View
     /// </summary>
     public partial class POSSystemMainWindow : Window
     {
-        public POSSystemMainWindow(User currentUser)
+        User currentUser = new User()
+        {
+            Id = 1,
+            Username = "test",
+            Password = "1234",
+            UserType = "Manager",
+            Name = "Random Name"
+
+        };
+        public POSSystemMainWindow()
         {
             InitializeComponent();
+            //currentUser = user;
             nameLabel.Content = "Current User: " + currentUser.Name.Trim();
             userTypeLabel.Content = "User Limits: " + currentUser.UserType.Trim();
         }
@@ -37,6 +47,25 @@ namespace POSSystem.View
             LoginWindow loginWindow = new LoginWindow();
             loginWindow.Show();
             this.Close();
+        }
+
+        private void Inventory_Button_Click(object sender, RoutedEventArgs e)
+        {
+            if(currentUser.UserType.Trim() == "Manager")
+            {
+                InventoryWindow iw = new InventoryWindow();
+                iw.Show();
+
+            }
+            else
+            {
+                MessageBox.Show("You are not authorized to access Inventory");
+            }
+        }
+
+        private void Cashier_Button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

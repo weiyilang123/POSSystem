@@ -145,14 +145,28 @@
     <Compile Include="Migrations\20180902095603_changeUser.designer.cs">
       <DependentUpon>20180902095603_changeUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20180902133459_addInventory.cs" />
+    <Compile Include="Migrations\20180902133459_addInventory.designer.cs">
+      <DependentUpon>20180902133459_addInventory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\UserDbContextModelSnapshot.cs" />
+    <Compile Include="Model\Inventory.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="UserDbContext.cs" />
+    <Compile Include="View\AddItemWindow.xaml.cs">
+      <DependentUpon>AddItemWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\InventoryWindow.xaml.cs">
+      <DependentUpon>InventoryWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\POSSystemMainWindow.xaml.cs">
       <DependentUpon>POSSystemMainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SeeAllInventoryWindow.xaml.cs">
+      <DependentUpon>SeeAllInventoryWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -166,11 +180,23 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\AddItemWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\InventoryWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\LoginWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\POSSystemMainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SeeAllInventoryWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

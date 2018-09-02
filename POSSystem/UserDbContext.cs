@@ -12,7 +12,7 @@ namespace POSSystem
     class UserDbContext : DbContext
     {
         public DbSet<User> Users { get; set; }
-        
+        public DbSet<Inventory> Inventorys { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
