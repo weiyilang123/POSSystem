@@ -42,6 +42,8 @@
         <Button Content="Back" Grid.Column="10" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Width="200" Height="100" FontSize="36px" Background="#FFF69614" FontWeight="ExtraBold" Click="Back_Button_Click"/>
         <Button Content="All Inventory" HorizontalAlignment="Left" Margin="0,9.667,0,0" Grid.Row="1" VerticalAlignment="Top" Width="454" Height="267" Click="AllInventory_Button_Click" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
         <Button Content="Add an item" Grid.Column="3" HorizontalAlignment="Left" Margin="10,9.667,0,0" Grid.Row="1" VerticalAlignment="Top" Width="444" Height="267" Click="AddItem_Button_Click" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <Button Content="Delete an item" Grid.Column="6" HorizontalAlignment="Left" Margin="10,9.667,0,0" Grid.Row="1" VerticalAlignment="Top" Width="444" Height="267" Click="DeleteItem_Button_Click" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <Button Content="Update an item" HorizontalAlignment="Left" Margin="10,4.667,0,0" Grid.Row="4" VerticalAlignment="Top" Width="444" Height="267" Click="UpdateItem_Button_Click" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
 
 
 

@@ -5,25 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:POSSystem.View"
         mc:Ignorable="d"
+        Topmost="True"
         Title="All Inventory" Height="1000" Width="1500" Background="#FF33ECE6">
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <ListView x:Name="inventoryListView" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,175,10,10" >
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn Header="Id" DisplayMemberBinding="{Binding ItemId}"/>
-                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding ItemName}"/>
-                    <GridViewColumn Header="Item Price" DisplayMemberBinding="{Binding ItemPrice}"/>
-                    <GridViewColumn Header="Stock Number" DisplayMemberBinding="{Binding ItemStockNumber}"/>
-                    <GridViewColumn Header="EAN Number" DisplayMemberBinding="{Binding ItemEANNumber}"/>
-                    <GridViewColumn Header="Item Description" Width="700" DisplayMemberBinding="{Binding ItemDescription}"/>
-                </GridView>
-            </ListView.View>
-        </ListView>
+        <DataGrid x:Name="inventoryDataGrid" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,175,10,10">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding ItemId}" Header="Id" />
+                <DataGridTextColumn Binding="{Binding ItemName}" Header="Item Name" />
+                <DataGridTextColumn Binding="{Binding ItemPrice}" Header="Item Price" />
+                <DataGridTextColumn Binding="{Binding ItemStockNumber}" Header="Stock Number" />
+                <DataGridTextColumn Binding="{Binding ItemEANNumber}" Header="EAN Number" />
+                <DataGridTextColumn Binding="{Binding ItemDescription}" Header="Item Description" Width="700"/>
+            </DataGrid.Columns>
+        </DataGrid>
         <TextBox Name="searchTextBox" HorizontalAlignment="Left" Height="24" Margin="10,119,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="313" TextChanged="TextBox_TextChanged"/>
         <Label Content="Search:" HorizontalAlignment="Left" Margin="10,88,0,0" VerticalAlignment="Top"/>
+        <Button Content="Refresh" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" Width="51" Height="43" Click="Refresh_Button_Click"/>
 
     </Grid>
 </Window>

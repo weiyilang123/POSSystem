@@ -22,35 +22,49 @@ namespace POSSystem.View
     public partial class SeeAllInventoryWindow : Window
     {
 
-        UserDbContext context = new UserDbContext();
+        
         List<Inventory> inventories = null;
         
         public SeeAllInventoryWindow()
         {
             InitializeComponent();
-            inventories = new List<Inventory>();
-            foreach(var inv in context.Inventorys)
-            {
-                inventories.Add(inv);
-                inventoryListView.Items.Add(inv);
-            }
-            
+
+            showAllTheInventory();
            // inventoryListView.ItemsSource = inventories;
            
             
         }
 
+        private void showAllTheInventory()
+        {
+            UserDbContext context = new UserDbContext();
+            inventoryDataGrid.Items.Clear();
+            inventories = new List<Inventory>();
+            foreach (var inv in context.Inventorys)
+            {
+                inventories.Add(inv);
+                inventoryDataGrid.Items.Add(inv);
+
+            }
+        }
+
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            inventoryListView.Items.Clear();
+            inventoryDataGrid.Items.Clear();
             foreach(var i in inventories)
             {
                 if(i.ItemName.ToLower().Contains(searchTextBox.Text.ToLower()) || i.ItemPrice.Contains(searchTextBox.Text.ToLower()) ||
                     i.ItemStockNumber.ToLower().Contains(searchTextBox.Text.ToLower()) || i.ItemEANNumber.ToLower().Contains(searchTextBox.Text.ToLower()))
                 {
-                    inventoryListView.Items.Add(i);
+                    inventoryDataGrid.Items.Add(i);
                 }
             }
+        }
+
+        private void Refresh_Button_Click(object sender, RoutedEventArgs e)
+        {
+            showAllTheInventory();
+            searchTextBox.Text = "";
         }
     }
 }

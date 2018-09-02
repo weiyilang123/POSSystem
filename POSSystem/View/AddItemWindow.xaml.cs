@@ -41,13 +41,18 @@ namespace POSSystem.View
                 context.Add<Inventory>(inventory);
                 context.SaveChanges();
                 MessageBox.Show("Data saved");
+                nameTextBox.Text = "";
+                priceTextBox.Text = "";
+                stockTextBox.Text = "";
+                EANTextBox.Text = "";
+                DescriptionTextBox.Text = "";
+            }
+            else
+            {
+                MessageBox.Show("Please fill all the fields.");
             }
 
-            nameTextBox.Text = "";
-            priceTextBox.Text = "";
-            stockTextBox.Text = "";
-            EANTextBox.Text = "";
-            DescriptionTextBox.Text = "";
+            
         }
     }
 }

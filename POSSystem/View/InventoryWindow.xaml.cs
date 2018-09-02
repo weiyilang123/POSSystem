@@ -46,5 +46,17 @@ namespace POSSystem.View
             AddItemWindow addItem = new AddItemWindow();
             addItem.Show();
         }
+
+        private void DeleteItem_Button_Click(object sender, RoutedEventArgs e)
+        {
+            DeleteItemWindow addItem = new DeleteItemWindow();
+            addItem.Show();
+        }
+
+        private void UpdateItem_Button_Click(object sender, RoutedEventArgs e)
+        {
+            UpdateItemWindow addItem = new UpdateItemWindow();
+            addItem.Show();
+        }
     }
 }
